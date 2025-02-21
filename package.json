@@ -1,0 +1,13 @@
+{
+  "name": "bajaj-fullstack-app",
+  "version": "1.0.0",
+  "description": "Bajaj Finserv Health Challenge Fullstack Application",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "build": "cd backend && npm install",
+    "install": "cd backend && npm install && cd ../frontend && npm install"
+  },
+  "engines": {
+    "node": "16.x"
+  }
+}

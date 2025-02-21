@@ -1,11 +1,12 @@
 {
   "name": "bajaj-backend",
   "version": "1.0.0",
-  "description": "Backend for Bajaj Machine Coding Challenge",
+  "description": "Backend for Bajaj Finserv Health Challenge",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "build": ""
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -13,5 +14,8 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
