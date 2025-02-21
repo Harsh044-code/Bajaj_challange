@@ -1,2 +1,2 @@
-web: cd backend && gunicorn --bind 0.0.0.0:$PORT app:app
+web: cd backend && npm start
 frontend: cd frontend && npm start
