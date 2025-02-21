@@ -11,7 +11,9 @@ const corsOptions = {
       'http://localhost:3000',
       'https://localhost:3000',
       'http://127.0.0.1:3000',
-      'https://127.0.0.1:3000'
+      'https://127.0.0.1:3000',
+      'https://bajaj-frontend.onrender.com',  // Add frontend Render URL
+      '*'  // Allow all for flexibility
     ];
     
     // Allow requests with no origin (like mobile apps or curl requests)
