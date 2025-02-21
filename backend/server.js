@@ -4,7 +4,16 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+const corsOptions = {
+  origin: [
+    'https://bajaj-frontend.vercel.app',  // Replace with actual Vercel URL
+    'http://localhost:3000'  // Keep localhost for local development
+  ],
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 function generateUserId(name = '22BCS11231_Harsh Raj Choudhary') {
