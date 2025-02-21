@@ -5,11 +5,8 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 
 const corsOptions = {
-  origin: [
-    'https://bajaj-frontend.vercel.app',  // Replace with actual Vercel URL
-    'http://localhost:3000'  // Keep localhost for local development
-  ],
-  methods: ['GET', 'POST'],
+  origin: '*', // Allow all origins for local development
+  methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 };
 
@@ -57,7 +54,7 @@ app.post('/bfhI', (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`);
 });
 
