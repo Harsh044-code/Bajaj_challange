@@ -47,7 +47,19 @@ npm install -g vercel
 vercel
 ```
 
+### Netlify Deployment (Frontend)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR_NETLIFY_SITE_ID/deploy-status)](https://app.netlify.com/sites/YOUR_NETLIFY_SITE_NAME/deploys)
+
+The frontend is deployed on Netlify. 
+
+**Deployment Steps:**
+1. Connect your GitHub repository to Netlify
+2. Set build settings:
+   - Build Command: `npm run build`
+   - Publish Directory: `build/`
+3. Configure environment variables as needed
+
 ## Technologies
 - Backend: Node.js, Express
 - Frontend: React
-- Deployment: Heroku, Vercel
+- Deployment: Heroku, Vercel, Netlify
