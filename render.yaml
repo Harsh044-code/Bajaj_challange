@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: bajaj-backend
+    env: node
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 16.x
+    plan: free
