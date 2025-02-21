@@ -1,0 +1,40 @@
+{
+  "services": [
+    {
+      "type": "web",
+      "name": "bajaj-backend",
+      "env": "node",
+      "plan": "free",
+      "buildCommand": "npm install",
+      "startCommand": "npm start",
+      "envVars": [
+        {
+          "key": "NODE_VERSION",
+          "value": "16.x"
+        }
+      ],
+      "repo": {
+        "branch": "main",
+        "rootDir": "backend"
+      }
+    },
+    {
+      "type": "static",
+      "name": "bajaj-frontend",
+      "env": "static",
+      "plan": "free",
+      "buildCommand": "npm run build",
+      "publishDir": "build",
+      "repo": {
+        "branch": "main",
+        "rootDir": "frontend"
+      },
+      "envVars": [
+        {
+          "key": "REACT_APP_API_URL",
+          "value": "https://bajaj-backend.onrender.com"
+        }
+      ]
+    }
+  ]
+}
