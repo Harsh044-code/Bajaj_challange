@@ -5,7 +5,11 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 
 const corsOptions = {
-  origin: '*', // Allow all origins for local development
+  origin: [
+    'https://bajaj-frontend.loca.lt', // Frontend localtunnel URL
+    'http://localhost:3000',          // Local development
+    '*'                               // Wildcard for testing
+  ],
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 };
